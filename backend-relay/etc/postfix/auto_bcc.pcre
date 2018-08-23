@@ -4,11 +4,8 @@
 #
 #   Automatically BCC all mail EXCEPT for the load-balancer health checks
 #   from haproxy-smtp-check@subdomain.example.org.
-#
-# http://postfix.1071664.n5.nabble.com/exclude-email-account-from-always-bcc-td13695.html
-# https://www.clearos.com/clearfoundation/social/community/bcc-all-mail-except-certain-addresses
 
-# Note: Whitespace is VERY important (e.g., do not indent)
+
 if !/^haproxy-smtp-check@subdomain\.example\.org$/
 /@/ BCC archive@example.org
 endif

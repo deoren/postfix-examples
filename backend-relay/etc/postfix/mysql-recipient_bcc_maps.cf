@@ -1,14 +1,5 @@
 # https://github.com/deoren/postfix-examples
 
-# References:
-#
-#   http://www.postfix.org/mysql_table.5.html
-#   https://workaround.org/ispmail/wheezy/connecting-postfix-to-the-database
-
-# NOTE: This file should be accessible by only root and postfix users
-#
-#   chown root:postfix /etc/postfix/mysql-*.cf
-#   chmod u=rw,g=r,o= /etc/postfix/mysql-*.cf
 
 user = mailrelay1
 password = PLACEHOLDER

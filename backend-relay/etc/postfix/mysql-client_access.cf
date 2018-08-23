@@ -1,25 +1,5 @@
 # https://github.com/deoren/postfix-examples
 
-# Purpose: Whitelist or blacklist clients (which includes other mail servers)
-
-##############################################################################
-# Search the specified access database for the client hostname, parent domains,
-# client IP address, or networks obtained by stripping least significant
-# octets. See the access(5) manual page for details.
-##############################################################################
-#
-# References:
-#
-#  http://www.postfix.org/access.5.html
-#  http://www.postfix.org/postconf.5.html#check_client_access
-#  http://www.postfix.org/mysql_table.5.html
-
-
-# NOTE: This file should be accessible by only root and postfix users
-#
-#   chown root:postfix /etc/postfix/mysql-*.cf
-#   chmod u=rw,g=r,o= /etc/postfix/mysql-*.cf
-
 user = mailrelay1
 password = PLACEHOLDER
 

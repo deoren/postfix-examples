@@ -2,22 +2,6 @@
 
 # Purpose: Whitelist or blacklist recipients
 
-############################################################################
-# Search the specified access(5) database for the resolved RCPT TO address,
-# domain, parent domains, or localpart@, and execute the corresponding action.
-############################################################################
-
-# References:
-#
-#  http://www.postfix.org/postconf.5.html#check_recipient_access
-#  http://www.postfix.org/access.5.html
-#  http://www.postfix.org/mysql_table.5.html
-
-# NOTE: This file should be accessible by only root and postfix users
-#
-#   chown root:postfix /etc/postfix/mysql-*.cf
-#   chmod u=rw,g=r,o= /etc/postfix/mysql-*.cf
-
 user = mailrelay1
 password = PLACEHOLDER
 
