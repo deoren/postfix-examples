@@ -1,0 +1,22 @@
+# https://github.com/deoren/postfix-examples
+
+# Purpose:
+#
+#   Cleanup broken/invalid source domain values and replace with common domain
+#   for our systems.
+
+# References:
+#
+# http://www.linuxquestions.org/questions/linux-server-73/rewrite-sender-address-in-postfix-852693/
+# http://www.postfix.org/pcre_table.5.html
+# http://www.postfix.org/canonical.5.html
+
+
+# Original: something@hostname.localdomain, something@localdomain
+# Modified: something@subdomain.example.org
+/^(.*@)(.*).?localdomain$/     ${1}subdomain.example.org
+
+
+# Original: something@server_name.subdomain.example.org
+# Modified: something@subdomain.example.org
+/^(.*@)(.+)subdomain.example.org$/     ${1}subdomain.example.org

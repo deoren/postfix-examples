@@ -1,0 +1,4 @@
+# https://github.com/deoren/postfix-examples
+
+[mysqld_safe]
+syslog

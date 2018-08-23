@@ -1,0 +1,23 @@
+# https://github.com/deoren/postfix-examples
+
+# References:
+#
+#   http://www.postfix.org/mysql_table.5.html
+#   https://workaround.org/ispmail/wheezy/connecting-postfix-to-the-database
+
+# NOTE: This file should be accessible by only root and postfix users
+#
+#   chown root:postfix /etc/postfix/mysql-*.cf
+#   chmod u=rw,g=r,o= /etc/postfix/mysql-*.cf
+
+user = mailrelay1
+password = PLACEHOLDER
+
+hosts = db-server-01.subdomain.example.org:3306
+dbname = mailserver
+
+query =
+    SELECT bcc_recipient
+    FROM recipient_bcc_maps
+    WHERE original_recipient ='%s'
+    AND enabled = 1;
